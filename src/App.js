@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from "./components/ui/header";
+import './index.css'
 import './App.css';
+import Container from "@material-ui/core/Container";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Typography from "@material-ui/core/Typography";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header/>
+            <CssBaseline/>
+            <Container maxWidth="lg" fixed>
+                <Typography component="div" style={{backgroundColor: '#512156', height: '100vh'}}>
+                    <Typography variant="h1"> Home </Typography>
+                </Typography>
+            </Container>
+        </div>
+    );
 }
 
 export default App;
